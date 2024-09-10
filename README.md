@@ -48,13 +48,13 @@ This project is a comprehensive application for managing products and users. It 
 1. **Clone the Repository**
 
 
-   ```bash
+```bash
 
-   git clone https://github.com/yourusername/yourproject.git
+git clone https://github.com/Khemu1/MarketHive.git
 
-   cd yourproject
+cd MarketHive
 
-    ```
+```
 
 Using npm:
 
