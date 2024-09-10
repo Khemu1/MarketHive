@@ -128,13 +128,13 @@ Start the Server
 
 # **Start the Project**
 
-   ``` bash
+``` bash
 
-        npm start
+npm start
 
-        The server will be running on http://localhost:3000.
+The server will be running on http://localhost:3000.
 
-   ```
+ ```
 
 # API Endpoints
 
