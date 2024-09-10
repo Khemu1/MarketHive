@@ -16,20 +16,6 @@ This project is a comprehensive application for managing products and users. It 
 - **Product Retrieval**: Fetch all products associated with a user, excluding those marked as deleted.
 
 
-## Features
-
-
-- **User Authentication**: Register, login, and manage user sessions.
-
-- **Product CRUD Operations**: Create, read, update, and delete products.
-
-- **Soft Deletion**: Mark products as deleted without actual database removal.
-
-- **Paranoid Mode**: Utilizes Sequelize's paranoid mode to handle soft deletions.
-
-- **Data Validation**: Input validation for product and user fields.
-
-
 ## Technologies Used
 
 
