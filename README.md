@@ -142,7 +142,7 @@ Start the Server
 
 ```
 
-4. **Start the Project**
+# **Start the Project**
 
    ``` bash
 
@@ -150,26 +150,65 @@ Start the Server
 
         The server will be running on http://localhost:3000.
 
-    ```
+   ```
 
 # API Endpoints
 
+- **POST** [http://localhost:3000/auth/signUp](http://localhost:3000/auth/signUp)  
+  **Description**: Register a new user and receive a JWT token.  
+  **Request Body**:
+  - `username`: string
+  - `role`: "admin" | "user" | "seller" (optional)
+  - `email`: string
+  - `password`: string
 
-    POST /api/register: Register a new user.
+- **POST** [http://localhost:3000/auth/signIn](http://localhost:3000/auth/signIn)  
+  **Description**: Login and receive a JWT token.  
+  **Request Body**:
+  - `usernameOrEmail`: string
+  - `password`: string
 
-    POST /api/login: Login and receive a JWT token.
+- **POST** [http://localhost:3000/project/add-project](http://localhost:3000/project/add-project)  
+  **Description**: Create a new product. User must be authenticated and authorized.  
+  **Request Body**:
+  - `createdBy`: number
+  - `title`: string
+  - `description`: string
+  - `shortDescription`: string
+  - `isFeatured`: boolean
+  - `productImage`: array of strings
+  - `productUrl`: string
+  - `tags`: array of strings
+  - `category`: array of strings
+  - `price`: number
 
-    GET /api/products: Retrieve all products for the authenticated user.
+- **GET** [http://localhost:3000/project/get-project/:id](http://localhost:3000/project/get-project/:id)  
+  **Description**: Return a specific product by ID.  
+  **Request Parameters**:
+  - `id`: The ID of the product to retrieve.
 
-    POST /api/products: Create a new product.
+- **GET** [http://localhost:3000/project/get-user-projects](http://localhost:3000/project/get-user-projects)  
+  **Description**: Return all projects for the authenticated user. User must be authenticated.
 
-    PUT /api/products/
+- **DELETE** [http://localhost:3000/project/delete-user-project/:id](http://localhost:3000/project/delete-user-project/:id)  
+  **Description**: Soft delete a specific product by ID. User must be authenticated and authorized.  
+  **Request Parameters**:
+  - `id`: The ID of the product to delete.
 
-    : Update an existing product.
-
-    DELETE /api/products/
-
-    : Soft delete a product.
-
+- **PUT** [http://localhost:3000/project/update-user-project/:id](http://localhost:3000/project/update-user-project/:id)  
+  **Description**: Update an existing product by ID. User must be authenticated and authorized.  
+  **Request Body**:
+  - `createdBy`: number (optional)
+  - `title`: string (optional)
+  - `description`: string (optional)
+  - `shortDescription`: string (optional)
+  - `isFeatured`: boolean (optional)
+  - `productImage`: array of strings (optional)
+  - `productUrl`: string (optional)
+  - `tags`: array of strings (optional)
+  - `category`: array of strings (optional)
+  - `price`: number (optional)
+  **Request Parameters**:
+  - `id`: The ID of the product to update.
 
     
