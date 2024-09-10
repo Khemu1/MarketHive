@@ -10,9 +10,9 @@ import { authUser, restrictTo } from "../middlewares/authMiddleware";
 
 const projectRouter = Router();
 
-projectRouter.post("/addProject", authUser, restrictTo(["seller"]), addProduct);
+projectRouter.post("/add-project", authUser, restrictTo(["seller"]), addProduct);
 projectRouter.get("/get-project/:id", getProduct);
-projectRouter.get("/get-user-projects/:id", authUser, getUserProducts);
+projectRouter.get("/get-user-projects", authUser, getUserProducts);
 projectRouter.put(
   "/update-user-project/:id",
   authUser,
