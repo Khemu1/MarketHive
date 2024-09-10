@@ -72,13 +72,11 @@ npm install
     Create a .env file in the root directory and add the following environment variables:
 
 
-    env
 
 
     SERVER_PORT=3000
 
-
-    # Database Configuration
+    ### Database Configuration
 
     DB_USERNAME=your_database_username
 
@@ -91,19 +89,19 @@ npm install
     DB_PORT=5432
 
 
-    # JWT Configuration
+    ### JWT Configuration
 
     JWT_SECRET_KEY=your_jwt_secret_key
 
     JWT_EXPIRES_IN=90d
 
 
-    # Environment
+    ### Environment
 
     NODE_ENV=development
 
 
-    # Admin User Configuration
+    ### Admin User Configuration
 
     ADMIN_USERNAME=your_admin_username
 
